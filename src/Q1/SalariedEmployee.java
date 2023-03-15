@@ -1,3 +1,5 @@
+package Q1;
+
 public class SalariedEmployee extends Employee {
     protected int weeklySalary;
 

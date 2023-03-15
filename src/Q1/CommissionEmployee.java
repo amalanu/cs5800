@@ -1,3 +1,5 @@
+package Q1;
+
 public class CommissionEmployee extends Employee {
     protected int commissionRate;
     protected int grossSales;
