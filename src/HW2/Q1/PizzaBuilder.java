@@ -5,21 +5,30 @@ import java.util.ArrayList;
 public class PizzaBuilder {
     //required
     private String chain;
+
+    //optional
     private String size;
-
     private ArrayList toppings = new ArrayList<>();
+    private boolean pizzaMade = false;
 
-    public PizzaBuilder(String chain, String size) {
+    public PizzaBuilder(String chain) {
         this.chain = chain;
+    }
+
+    public void setSize(String size) {
         this.size = size;
     }
 
-    public PizzaBuilder addTopping(String topping) {
+    public void addTopping(String topping) {
+        if (pizzaMade) {
+            toppings = new ArrayList<>();
+            pizzaMade = false;
+        }
         this.toppings.add(topping);
-        return this;
     }
 
     public Pizza build() {
+        pizzaMade = true;
         return new Pizza(this);
     }
 

@@ -5,8 +5,9 @@ import java.util.ArrayList;
 public class Pizza{
     //required
     private String chain;
-    private String size;
 
+    //optional
+    private String size;
     private ArrayList toppings = new ArrayList<>();
 
     public Pizza(PizzaBuilder builder) {
@@ -16,7 +17,7 @@ public class Pizza{
     }
 
     public void eat() {
-        System.out.println("Chain: " + this.chain + ", Size: " + this.size + "Toppings: ");
+        System.out.println("Chain: " + this.chain + ", Size: " + this.size + ", Toppings: ");
         for (int i = 0; i < toppings.size(); i++) {
             if (i < (toppings.size() - 1)) {
                 System.out.print(toppings.get(i) + ", ");
