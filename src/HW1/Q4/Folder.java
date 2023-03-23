@@ -1,4 +1,4 @@
-package Q4;
+package HW1.Q4;
 
 import java.util.ArrayList;
 

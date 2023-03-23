@@ -1,4 +1,4 @@
-package Q2;
+package HW1.Q2;
 
 public class CargoShip extends Ship {
     protected int shipTonnage;

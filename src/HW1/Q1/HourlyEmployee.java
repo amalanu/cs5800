@@ -1,4 +1,4 @@
-package Q1;
+package HW1.Q1;
 
 public class HourlyEmployee extends Employee {
     protected int hourlyWage;

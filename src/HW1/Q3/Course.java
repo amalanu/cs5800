@@ -1,4 +1,4 @@
-package Q3;
+package HW1.Q3;
 
 public class Course {
     private String courseName;
