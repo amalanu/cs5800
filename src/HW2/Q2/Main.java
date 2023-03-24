@@ -6,13 +6,13 @@ public class Main {
 
         FactoryFactory factory = new FactoryFactory();
 
-        VehicleFactory honda = factory.getFactory("Honda", "Car");
-        VehicleFactory porsche = factory.getFactory("Porsche", "Car");
-        VehicleFactory tesla = factory.getFactory("Tesla", "Car");
+        VehicleFactory honda = factory.getFactory("Honda");
+        VehicleFactory porsche = factory.getFactory("Porsche");
+        VehicleFactory tesla = factory.getFactory("Tesla");
 
-        VehicleFactory airbus = factory.getFactory("Airbus", "Plane");
-        VehicleFactory boeing = factory.getFactory("Boeing", "Plane");
-        VehicleFactory embraer = factory.getFactory("Embraer", "Plane");
+        VehicleFactory airbus = factory.getFactory("Airbus");
+        VehicleFactory boeing = factory.getFactory("Boeing");
+        VehicleFactory embraer = factory.getFactory("Embraer");
 
         honda.build();
         porsche.repair();
@@ -21,6 +21,24 @@ public class Main {
         airbus.build();
         boeing.repair();
         embraer.restore();
+
+        VehicleFactory tesla2 = factory.getFactory("Tesla");
+        VehicleFactory airbus2 = factory.getFactory("Airbus");
+
+        System.out.println("\n");
+
+        tesla2.repair();
+        airbus2.restore();
+
+        System.out.println("\n");
+
+        VehicleFactory seaRay = factory.getFactory("SeaRay");
+        VehicleFactory mastercraft = factory.getFactory("Mastercraft");
+        VehicleFactory bertram = factory.getFactory("Bertram");
+
+        seaRay.build();
+        mastercraft.repair();
+        bertram.restore();
     }
     
 }
