@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Folder implements FileObject{
     private String folderName;
-    ArrayList contents = new ArrayList<>();
+    ArrayList<FileObject> contents = new ArrayList<>();
 
     public Folder(String name) {
         setName(name);

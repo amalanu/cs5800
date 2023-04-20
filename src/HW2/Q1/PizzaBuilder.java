@@ -8,7 +8,7 @@ public class PizzaBuilder {
 
     //optional
     private String size;
-    private ArrayList toppings = new ArrayList<>();
+    private ArrayList<String> toppings = new ArrayList<>();
     private boolean pizzaMade = false;
 
     public PizzaBuilder(String chain) {
@@ -40,7 +40,7 @@ public class PizzaBuilder {
         return this.size;
     }
 
-    public ArrayList getToppings() {
+    public ArrayList<String> getToppings() {
         return this.toppings;
     }
 

@@ -8,7 +8,7 @@ public class Pizza{
 
     //optional
     private String size;
-    private ArrayList toppings = new ArrayList<>();
+    private ArrayList<String> toppings = new ArrayList<>();
 
     public Pizza(PizzaBuilder builder) {
         this.chain = builder.getChain();
