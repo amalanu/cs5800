@@ -27,5 +27,4 @@ public class Writer {
         FileCharacter temp = new FileCharacter(character, tempProperty);
         currentFile.addToFile(temp);
     }
-    
 }
