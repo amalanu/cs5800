@@ -2,10 +2,11 @@ package HW5.Q1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-public class User {
+public class User implements IterableByUser{
     private String userName;
     private ChatServer server;
     private ChatHistory history;
@@ -36,6 +37,7 @@ public class User {
     }
 
     public void getMessage(Message message) {
+        history.addMessage(message);
         message.displayMessage();
     }
 
@@ -69,5 +71,10 @@ public class User {
     public void getHistoryFromUser(String name) {
         ChatHistory otherHistory = server.getChatHistory(name);
         otherHistory.print();
+    }
+
+    @Override
+    public Iterator iterator(User userToSearchWith) {
+        return history.iterator(userToSearchWith);
     }
 }

@@ -1,8 +1,9 @@
 package HW5.Q1;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class ChatHistory {
+public class ChatHistory implements IterableByUser{
     private User user;
     ArrayList<MessageMemento> messageHistory = new ArrayList<>();
 
@@ -23,6 +24,15 @@ public class ChatHistory {
     public void deleteLastMessage() {
         int lastIndex = messageHistory.size() - 1;
         messageHistory.remove(lastIndex);
+        System.out.println("Last message deleted");
+    }
+
+    public int getLength() {
+        return messageHistory.size();
+    }
+
+    public MessageMemento getIndex(int index) {
+        return messageHistory.get(index);
     }
 
     public void print() {
@@ -32,5 +42,10 @@ public class ChatHistory {
             current = messageHistory.get(i);
             current.print();
         }
+    }
+
+    @Override
+    public Iterator iterator(User userToSearchWith) {
+        return new SearchMessagesByUser(userToSearchWith, this);
     }
 }
